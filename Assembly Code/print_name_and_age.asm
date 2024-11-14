@@ -11,7 +11,7 @@ main:
 	# reads the name
 	li $v0, 8
 	la $a0, name_buffer
-	lw $a1, 101
+	li $a1, 101
 	syscall
 	
 	# prompts user to enter age
@@ -45,9 +45,9 @@ main:
 
 .data
 prompt_name: .asciiz "What is your name: "
-prompt_age: .asciiz "age: "
-output_name: .asciiz "Your name is: "
-output_age: .asciiz "Your age is: "
+prompt_age: .asciiz "\n age: "
+output_name: .asciiz "\n Your name is: "
+output_age: .asciiz "\n Your age is: "
 .align 2
 name_buffer: .space 100
 	
