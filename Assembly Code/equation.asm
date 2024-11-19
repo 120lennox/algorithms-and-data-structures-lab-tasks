@@ -13,7 +13,6 @@ main:
 	li $v0, 5
 	syscall
 	move $s1, $v0
-	syscall
 	
 	# calculate 5*x*x + 2* x + 3
 	mul $t1, $s1, $s1
@@ -29,8 +28,8 @@ main:
 	
 	# print int
 	li $v0, 1
-	syscall
 	move $a0, $s0
+	syscall
 	
 	# exit
 	li $v0, 10
